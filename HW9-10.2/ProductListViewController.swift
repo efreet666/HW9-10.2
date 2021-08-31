@@ -8,44 +8,52 @@
 import UIKit
 
 class ProductListViewController: UIViewController {
-
-    var pizza = pizzaArray
+    @IBOutlet weak var productTableView: UITableView!
+    
+    @IBOutlet weak var cellImageView: UIImageView!
+    var pizzaArray: [Pizza] = [Pizza(name: "Пеперони", coast: 639, image: UIImage(named: "1")),
+                               Pizza(name: "Маргарита", coast: 540, image: UIImage(named: "2")),
+                               Pizza(name: "Ветчина и сыр", coast: 540, image: UIImage(named: "3")),
+                               Pizza(name: "Ветчина и грибы", coast: 560, image: UIImage(named: "4")),
+                               Pizza(name: "4 сыра", coast: 540, image: UIImage(named: "5")),
+                               Pizza(name: "Пеперони", coast: 639, image: UIImage(named: "1")),
+                               Pizza(name: "Маргарита", coast: 540, image: UIImage(named: "2")),
+                               Pizza(name: "Ветчина и сыр", coast: 540, image: UIImage(named: "3")),
+                               Pizza(name: "Ветчина и грибы", coast: 560, image: UIImage(named: "4")),
+                               Pizza(name: "4 сыра", coast: 540, image: UIImage(named: "5"))]
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
     }
     
-    func addProductViews() {
-            for product in 0..<pizza.count {
-                let productView = ProductView(frame: CGRect(x: 0, y: product * 100 + 100, width: 450, height: 100))
-                productView.setup(image: UIImage(named: "\(product + 1)"), productName: pizza.)
-                productView.setUnderLine(color: .lightGray)
-                let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showTrackVC(gestureRecognizer:)))
-                trackView.addGestureRecognizer(gestureRecognizer)
-                
-                
-               
-                configuratePlayer(trackName: trackNames[product])
-                configuratePlayerDurationLabel()
-                
-                view.addSubview(trackView)
-            }
-        }
-
-
+    
+    
 }
 
-extension UIView {
-    func setUnderLine(color: UIColor = .darkGray) {
-        let border = UIView()
-        self.addSubview(border)
+extension ProductListViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return pizzaArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+        let number = pizzaArray[indexPath.row]
         
-        border.backgroundColor = color
-        border.translatesAutoresizingMaskIntoConstraints = false
-        border.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 5).isActive = true
-        border.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        border.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
-        border.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+        cell.textLabel?.text = number.name
+        cell.imageView?.image = number.image
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140.0
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = PizzaViewController()
+        
     }
 }

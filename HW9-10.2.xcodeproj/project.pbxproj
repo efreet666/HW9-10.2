@@ -15,9 +15,9 @@
 		F50B8DAD26D812220022F146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50B8DAB26D812220022F146 /* LaunchScreen.storyboard */; };
 		F50B8DB626D814650022F146 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B8DB526D814650022F146 /* FirstViewController.swift */; };
 		F586A49726DC115900EF89DB /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586A49626DC115900EF89DB /* ProductListViewController.swift */; };
-		F586A49A26DC118600EF89DB /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586A49926DC118600EF89DB /* ProductView.swift */; };
 		F586A49D26DC129200EF89DB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586A49C26DC129200EF89DB /* Model.swift */; };
 		F586A4A026DC134F00EF89DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586A49F26DC134F00EF89DB /* Data.swift */; };
+		F586A4A426DEBEE200EF89DB /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586A4A326DEBEE200EF89DB /* PizzaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		F50B8DAE26D812220022F146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50B8DB526D814650022F146 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		F586A49626DC115900EF89DB /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
-		F586A49926DC118600EF89DB /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		F586A49C26DC129200EF89DB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F586A49F26DC134F00EF89DB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		F586A4A326DEBEE200EF89DB /* PizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +72,9 @@
 				F50B8DB526D814650022F146 /* FirstViewController.swift */,
 				F50B8DA626D8121E0022F146 /* Main.storyboard */,
 				F586A49626DC115900EF89DB /* ProductListViewController.swift */,
+				F586A4A326DEBEE200EF89DB /* PizzaViewController.swift */,
 				F586A49F26DC134F00EF89DB /* Data.swift */,
 				F586A49C26DC129200EF89DB /* Model.swift */,
-				F586A49926DC118600EF89DB /* ProductView.swift */,
 				F50B8DA926D812220022F146 /* Assets.xcassets */,
 				F50B8DAB26D812220022F146 /* LaunchScreen.storyboard */,
 				F50B8DAE26D812220022F146 /* Info.plist */,
@@ -153,11 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F586A49D26DC129200EF89DB /* Model.swift in Sources */,
+				F586A4A426DEBEE200EF89DB /* PizzaViewController.swift in Sources */,
 				F50B8DA526D8121E0022F146 /* ViewController.swift in Sources */,
 				F50B8DA126D8121E0022F146 /* AppDelegate.swift in Sources */,
 				F586A49726DC115900EF89DB /* ProductListViewController.swift in Sources */,
 				F50B8DA326D8121E0022F146 /* SceneDelegate.swift in Sources */,
-				F586A49A26DC118600EF89DB /* ProductView.swift in Sources */,
 				F50B8DB626D814650022F146 /* FirstViewController.swift in Sources */,
 				F586A4A026DC134F00EF89DB /* Data.swift in Sources */,
 			);
