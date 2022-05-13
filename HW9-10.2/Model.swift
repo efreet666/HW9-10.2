@@ -11,11 +11,11 @@ import UIKit
 struct Pizza {
     var name: String
     var coast: Double
-    var image: UIImage?
+    var images: [UIImage?]
     
-    init(name: String, coast: Double, image: UIImage?) {
+    init(name: String, coast: Double, images: [UIImage?]) {
         self.name = name
         self.coast = coast
-        self.image = image
+        self.images = images
     }
 }
